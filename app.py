@@ -15,7 +15,7 @@ app = Flask(__name__)
 analyzer = SentimentAnalyzer(lang="es")
 
 def generate_image(prompt):
-    API_KEY= "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"
+    API_KEY= os.environ["OPENAI_KEY"]
     headers = {
         "Authorization": f"Bearer {API_KEY}"
     }
@@ -36,7 +36,7 @@ def generate_image(prompt):
 
 def get_db_connection():
     connection = pymysql.connect(
-        host='localhost',
+        host='tec-courses.c45nqeerbhcx.us-east-2.rds.amazonaws.com',
         user='root',
         password='12345678',
         database='tec_courses',
