@@ -7,12 +7,12 @@ import os
 import subprocess
 import speech_recognition as sr
 from pydub import AudioSegment
-from pysentimiento import SentimentAnalyzer
+from pysentimiento import create_analyzer
 import requests
 
 
 app = Flask(__name__)
-analyzer = SentimentAnalyzer(lang="es")
+analyzer = create_analyzer(task="sentiment", lang="es")
 
 def generate_image(prompt):
     API_KEY= os.environ["OPENAI_KEY"]
@@ -207,4 +207,4 @@ def get_sentiment_counts(course_id):
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
+    app.run(host='0.0.0.0', port=5001)
