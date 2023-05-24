@@ -36,7 +36,7 @@ def generate_image(prompt):
 
 def get_db_connection():
     connection = pymysql.connect(
-        host='tec-courses.c45nqeerbhcx.us-east-2.rds.amazonaws.com',
+        host='localhost',
         user='root',
         password='12345678',
         database='tec_courses',
