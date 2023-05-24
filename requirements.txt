@@ -43,7 +43,7 @@ responses
 scikit-learn
 scipy
 six
-sklearn
+scikit-learn
 SpeechRecognition
 sympy
 threadpoolctl
